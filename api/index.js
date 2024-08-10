@@ -1,6 +1,8 @@
 import express from 'express';
 //if we want to use this kind of import statement then we need to set "type":"module"  in pkj json file , niether we have to use "require"
 import mongoose from 'mongoose';
+//importing the router
+import userRouter from './routes/user.route.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -20,4 +22,9 @@ app.listen(3000,()=> {
     }
 );
 
+
+
+
+//creating the api route
+app.use("/api/user", userRouter);
 
