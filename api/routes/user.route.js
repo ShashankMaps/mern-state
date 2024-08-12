@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.get('/test', test); //calling it controller
 
-export default router;
+export default router; //this is also called as userRouter
