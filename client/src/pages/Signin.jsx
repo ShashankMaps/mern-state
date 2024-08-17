@@ -8,6 +8,7 @@ import {
   signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
+import OAuth from "../components/OAuth";
 
 export default function SignIn() {
   //function for the form data
@@ -100,6 +101,9 @@ export default function SignIn() {
         >
           {loading ? "Loading...." : "Sign In"}
         </button>
+
+        {/* //addding  google Autho  functionality */}
+        <OAuth/>
       </form>
       <div className="flex gap-2 mt-5 items-center mx-auto justify-center">
         <p>Dont Have an account ?</p>

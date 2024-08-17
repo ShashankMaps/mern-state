@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import OAuth from "../components/OAuth";
 
 export default function SignUp() {
 
@@ -103,6 +104,9 @@ export default function SignUp() {
         className="bg-slate-900 text-slate-200 rounded w-50 px-20 py-2 hover:shadow-2xl hover:opacity-80  disabled:opacity-50">
          {loading ? "Loading...." : "Sign Up"}
         </button>
+
+        {/* //adding google OAuth  */}
+        <OAuth/>
       </form>
       <div className="flex gap-2 mt-5 items-center mx-auto justify-center">
         <p> Have an account ?</p>
